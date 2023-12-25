@@ -1,6 +1,7 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
 
+  import { getContextClient, gql, queryStore } from '@urql/svelte';
   import {
     Button,
     Content,

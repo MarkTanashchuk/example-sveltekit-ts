@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@0no-co/graphql.web@npm:^1.0.1":
+  version: 1.0.4
+  resolution: "@0no-co/graphql.web@npm:1.0.4"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+  peerDependenciesMeta:
+    graphql:
+      optional: true
+  checksum: bf63cb5b017063363c9a9e06dc17532abc1c2da402c7ebcbc7b5ab2a0601ec93b02de93af9e50d9daffb3b747eddcf0b1e5418a46d1182c5b8087b7d7a1768ad
+  languageName: node
+  linkType: hard
+
 "@aashutoshrathi/word-wrap@npm:^1.2.3":
   version: 1.2.6
   resolution: "@aashutoshrathi/word-wrap@npm:1.2.6"
@@ -4460,6 +4472,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@urql/core@npm:^4.1.0":
+  version: 4.2.2
+  resolution: "@urql/core@npm:4.2.2"
+  dependencies:
+    "@0no-co/graphql.web": "npm:^1.0.1"
+    wonka: "npm:^6.3.2"
+  checksum: f1db8f3ca6e0c8e6257a8eb5b7057959a47086a7390af1329ef509f04a6d15f4fb42f9e990bd519526abff504a5524b5b89babdff01d5d61d800ed23ca87c067
+  languageName: node
+  linkType: hard
+
+"@urql/svelte@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "@urql/svelte@npm:4.0.4"
+  dependencies:
+    "@urql/core": "npm:^4.1.0"
+    wonka: "npm:^6.3.2"
+  peerDependencies:
+    svelte: ^3.0.0 || ^4.0.0
+  checksum: 9d2306c126b066adb9ab21105ebc1e26e3506145436be6b645e185ebffc48df6e131fc097f22ce299ad4379d98220c25852b9d089a035adde912d54764e94d6e
+  languageName: node
+  linkType: hard
+
 "@vitest/expect@npm:0.34.6":
   version: 0.34.6
   resolution: "@vitest/expect@npm:0.34.6"
@@ -6807,6 +6841,7 @@ __metadata:
     "@sveltejs/package": "npm:^2.0.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.0.0"
     "@typescript-eslint/parser": "npm:^6.0.0"
+    "@urql/svelte": "npm:^4.0.4"
     autoprefixer: "npm:^10.4.16"
     carbon-components-svelte: "npm:^0.82.7"
     carbon-icons-svelte: "npm:^12.4.2"
@@ -12758,6 +12793,13 @@ __metadata:
   bin:
     why-is-node-running: cli.js
   checksum: 805d57eb5d33f0fb4e36bae5dceda7fd8c6932c2aeb705e30003970488f1a2bc70029ee64be1a0e1531e2268b11e65606e88e5b71d667ea745e6dc48fc9014bd
+  languageName: node
+  linkType: hard
+
+"wonka@npm:^6.3.2":
+  version: 6.3.4
+  resolution: "wonka@npm:6.3.4"
+  checksum: 77329eea673da07717476e1b8f1a22f1e1a4f261bb9a58fa446c03d3da13dbd5b254664f8aded5928d953f33ee5b399a17a4f70336e8b236e478209c0e78cda4
   languageName: node
   linkType: hard
 
