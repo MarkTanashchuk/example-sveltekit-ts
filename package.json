@@ -1,5 +1,6 @@
 {
   "name": "example-sveltekit-ts",
+  "packageManager": "yarn@4.0.2",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev",
@@ -27,6 +28,15 @@
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
+  "type": "module",
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@storybook/addon-a11y": "^7.6.6",
+    "@storybook/addon-storysource": "^7.6.6",
+    "@storybook/addon-svelte-csf": "^4.0.13",
+    "carbon-icons-svelte": "^12.4.2"
+  },
   "peerDependencies": {
     "svelte": "^4.0.0"
   },
@@ -44,6 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10.4.16",
+    "carbon-components-svelte": "^0.82.7",
     "chromatic": "^10.2.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
@@ -72,16 +83,5 @@
     "typescript": "^5.0.0",
     "vite": "^4.4.2",
     "vitest": "^0.34.0"
-  },
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "type": "module",
-  "dependencies": {
-    "@storybook/addon-a11y": "^7.6.6",
-    "@storybook/addon-storysource": "^7.6.6",
-    "@storybook/addon-svelte-csf": "^4.0.13",
-    "tinymce": "^6"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "example-sveltekit-ts@0.0.1"
+  }
 }
