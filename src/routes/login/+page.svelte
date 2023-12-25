@@ -11,20 +11,20 @@
     Tile
   } from 'carbon-components-svelte';
 
-  const username = writable('');
+  const email = writable('');
   const password = writable('');
 
   function handleLogin(e: any) {
     e.preventDefault();
-    console.log('Logging in with:', { username, password });
+    console.log('Logging in with:', { email, password });
   }
 
-  function handleSetUsername(e: any) {
-    username.set(e.target.value || '');
+  function handleSetEmail(e: any) {
+    email.set(e.target.value || '');
   }
 
   function handleSetPassword(e: any) {
-    username.set(e.target.value || '');
+    password.set(e.target.value || '');
   }
 </script>
 
@@ -34,10 +34,10 @@
     <Form on:submit={handleLogin}>
       <FormGroup class="stacked-form">
         <TextInput
-          id="username"
-          placeholder="Enter username..."
-          value={$username}
-          on:change={handleSetUsername}
+          id="email"
+          placeholder="Enter email..."
+          value={$email}
+          on:change={handleSetEmail}
           required
         />
         <PasswordInput
