@@ -1,7 +1,15 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
 
-  import { Button, Content, Form, FormGroup, TextInput, Tile } from 'carbon-components-svelte';
+  import {
+    Button,
+    Content,
+    Form,
+    FormGroup,
+    PasswordInput,
+    TextInput,
+    Tile
+  } from 'carbon-components-svelte';
 
   const email = writable('');
   const password = writable('');
@@ -11,39 +19,66 @@
     e.preventDefault();
     console.log('Signing in with:', { email, password, confirmPassword });
   };
+
+  function handleSetEmail(e: any) {
+    email.set(e.target.value || '');
+  }
+
+  function handleSetPassword(e: any) {
+    email.set(e.target.value || '');
+  }
+
+  function handleSetPasswordConfirmation(e: any) {
+    email.set(e.target.value || '');
+  }
 </script>
 
 <Content>
   <Tile>
     <h2>Sign In</h2>
     <Form on:submit={handleSignIn}>
-      <FormGroup legendText="">
+      <FormGroup class="stacked-form">
         <TextInput
           id="email"
-          labelText="Email"
+          placeholder="Enter email..."
           type="email"
           value={$email}
-          on:change={(e) => email.set(e.target.value || '')}
+          on:change={handleSetEmail}
           required
         />
-        <TextInput
+        <PasswordInput
           id="password"
-          labelText="Password"
-          type="password"
+          placeholder="Enter password..."
           value={$password}
-          on:change={(e) => password.set(e.target.value || '')}
+          tooltipAlignment="start"
+          tooltipPosition="left"
+          on:change={handleSetPassword}
           required
         />
-        <TextInput
+        <PasswordInput
           id="confirmPassword"
-          labelText="Confirm Password"
-          type="password"
+          placeholder="Confirm password..."
+          tooltipAlignment="start"
+          tooltipPosition="left"
           value={$confirmPassword}
-          on:change={(e) => confirmPassword.set(e.target.value || '')}
+          on:change={handleSetPasswordConfirmation}
           required
         />
       </FormGroup>
+
       <Button type="submit" kind="primary">Sign In</Button>
     </Form>
   </Tile>
 </Content>
+
+<style>
+  :global(.stacked-form) {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
+    margin: 1rem 0;
+  }
+</style>
