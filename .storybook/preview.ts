@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/svelte';
+import 'carbon-components-svelte/css/g10.css';
 
 const preview: Preview = {
   parameters: {

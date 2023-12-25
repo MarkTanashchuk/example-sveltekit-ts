@@ -11,6 +11,9 @@ const config: StorybookConfig = {
     '@storybook/addon-svelte-csf',
     '@storybook/addon-interactions'
   ],
+  features: {
+    storyStoreV7: true
+  },
   framework: {
     name: '@storybook/sveltekit',
     options: {}
