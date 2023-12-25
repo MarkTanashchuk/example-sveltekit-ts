@@ -1,9 +1,16 @@
 <script>
+  import 'carbon-components-svelte/css/g10.css';
   import '../app.css';
+
+  import { Column, Content, Grid, Row } from 'carbon-components-svelte';
 </script>
 
-<svelte:head>
-  <script src="node_modules/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
-</svelte:head>
-
-<slot />
+<Content>
+  <Grid>
+    <Row>
+      <Column>
+        <slot />
+      </Column>
+    </Row>
+  </Grid>
+</Content>
